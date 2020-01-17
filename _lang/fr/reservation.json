@@ -1,0 +1,46 @@
+{
+    "titre": "Réservation",
+
+    "nom": "Nom",
+    "votreNom": "Votre Nom",
+    "nomError": "Veuillez entrer votre nom pour la réservation",
+
+    "email": "Email",
+    "votreEmail": "Votre Email",
+    "mailError": "Veuillez saisir un email valide pour la réservation",
+
+    "telephone": "Téléphone",
+    "votreTelephone": "Votre téléphone",
+    "phoneError": "Veuillez indiquer un numéro de téléphone",
+
+    "nbInvites": "Nombre d'invités",
+    "personne": "personne",
+    "personnes": "personnes",
+    "inviteError": "Veuillez indiquer le nombre de personnes pour la réservation",
+
+    "date": "Date",
+    "dateError": "Veuillez indiquer la date de la réservation",
+    "datePassee": "La date de réservation demandée est déjà passée",
+
+    "heure": "Heure",
+    "h_12h00": "12h00",
+    "h_12h15": "12h15",
+    "h_12h30": "12h30",
+    "h_12h45": "12h45",
+    "h_13h00": "13h00",
+    "h_19h30": "19h30",
+    "h_19h45": "19h45",
+    "h_20h00": "20h00",
+    "h_20h15": "20h15",
+    "h_20h30": "20h30",
+    "heureError": "Veuillez indiquer l'heure de la réservation",
+
+    "message": "Message",
+    "votreMessage": "Votre message",
+
+    "info": "* Ces informations sont requises",
+    "contactReservation": "Pour une réservation supérieure à 8 personnes, merci de contacter directement le restaurant par mail <a href='mailto:restolabastide@aol.com'> restolabastide@aol.com </a> ou par téléphone au <a href='tel:0553226059'> 05 53 22 60 59</a>",
+    "btnReserver": "Réserver",
+    "messageResaOk": "Votre de demande de réservation a été prise en compte.",
+    "messageResaFail": "Il y a une erreur dans votre demande de réservation"
+}

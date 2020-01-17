@@ -1,0 +1,46 @@
+{
+    "titre": "Reservation",
+
+    "nom": "Name",
+    "votreNom": "Your Name",
+    "nomError": "Please enter your name for the reservation",
+
+    "email": "Email",
+    "votreEmail": "Your Email",
+    "mailError": "Please enter your email adresse for the reservation",
+
+    "telephone": "Phone number",
+    "votreTelephone": "Your phone number",
+    "phoneError": "Please enter your phone number for the reservation",
+
+    "nbInvites": "Number of guests",
+    "personne": "people",
+    "personnes": "people",
+    "inviteError": "Please enter the number of guests for the reservation",
+
+    "date": "Date",
+    "dateError": "Please enter the date of the reservation",
+    "datePassee": "The requested reservation date is already passed",
+
+    "heure": "Time",
+    "h_12h00": "12:00pm",
+    "h_12h15": "12:15pm",
+    "h_12h30": "12:30pm",
+    "h_12h45": "12:45pm",
+    "h_13h00": "1:00pm",
+    "h_19h30": "7:30pm",
+    "h_19h45": "7:45pm",
+    "h_20h00": "8:00pm",
+    "h_20h15": "8:15pm",
+    "h_20h30": "8:30pm",
+    "heureError": "Please indicate the time of booking",
+
+    "message": "Message",
+    "votreMessage": "Your message",
+
+    "info": "* This informations are required",
+    "contactReservation": "For a reservation superior to 8 people, please contact directly the restaurant by mail <a href='mailto:restolabastide@aol.com'> restolabastide@aol.com </a> or by phone at <a href='tel:0553226059'> 05 53 22 60 59</a>",
+    "btnReserver": "Book",
+    "messageResaOk": "Your reservation request has been taken into account.",
+    "messageResaFail": "There is an error in your booking request."
+}
