@@ -20,7 +20,6 @@
                                 <li><a href="index.php?page=reservation"><?= $lang->footer->reservation ?></a></li>
                                 <li><a href="index.php?page=contact"><?= $lang->footer->contact ?></a></li>
                                 <li><a href="index.php?page=livre_d_or"><?= $lang->footer->livre_dOr ?></a></li>
-                                <!-- <li><a href="#"><strong>N</strong>ous rejoindre</a></li> Page recrutement à créer -->
                             </ul>
                         </div>
                     </div>
