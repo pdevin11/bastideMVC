@@ -6,56 +6,66 @@
 </head>
 
 <body>
+    <div class="container">
     <!-- Header : menu principal -->
 
     <?php include_once 'includes/header.php'; ?>
     
     <!-- Formules -->
-
-    <div class="container">
     
-    <ul>
-        <?php foreach($allMenus as $menu){ ?>
-            <li><a href="index.php?page=carte#<?= $menu['id'] ?>"><?= $menu['menu_name'] ?></a></li>
-        <?php } ?>
-    </ul>
+    <div class="row">
+        <div class='col-md-2 menu_list'>
+            <ul class="list_menus">
+                <?php foreach($allMenus as $menu){ ?>
+                    <li><a class="list_menu" href="index.php?page=carte#<?= $menu['id'] ?>"><?= $menu['menu_name'] ?></a></li>
+                <?php } ?>
+            </ul>
+        </div> <!-- ./col-md-2 -->
+        
+        <div class='col-md-10 menus'>
 
-    <?php for($i=0; $i<count($allMenus); $i++){ ?>
+        <?php for($i=0; $i<count($allMenus); $i++){ ?>
 
-    <div class='menu_frame'>
-        <h2><?= $allMenus[$i]['menu_name'] ?></h2>
+            <div class='the-menu' id="<?= $allMenus[$i]['id'] ?>">
+                <h2><span class="menu_name"><?= $allMenus[$i]['menu_name'] ?></span></h2>
 
-        <div class='entrees'>
-            <h2>Entrées</h2>
-            <?php for($j=0; $j<count($entrees); $j++){ ?>
+                <div class='plat_type'>
+                    <h3>Entrées</h3>
+                    <?php for($j=0; $j<count($entrees); $j++){ ?>
 
-                <h3><?= $entrees[$i][$j]['plat_name'] ?></h3>
+                        <span class='plat_name'><?= $entrees[$i][$j]['plat_name'] ?></span>
+                        <span class="translation"><?= $entrees[$i][$j]['translation'] ?></span>
+
+                    <?php } ?>
+                </div>
+
+                <div class='plat_type'>
+                    <h3>Plats</h3>
+                    <?php for($j=0; $j<count($plats); $j++){ ?>
+
+                        <span class="plat_name"><?= $plats[$i][$j]['plat_name'] ?></span>
+                        <span class="translation"><?= $plats[$i][$j]['translation'] ?></span>
+
+                    <?php } ?>
+                </div>
+
+                <div class='plat_type'>
+                    <h3>Désserts</h3>
+                    <?php for($j=0; $j<count($desserts); $j++){ ?>
+
+                        <span class='plat_name'><?= $desserts[$i][$j]['plat_name'] ?></span>
+                        <span class='translation'><?= $desserts[$i][$j]['translation'] ?></span>
+
+                    <?php } ?>
+                </div>
+
+            </div> <!-- ./the-menu -->
 
             <?php } ?>
-        </div>
 
-        <div class='plats'>
-            <h2>Plats</h2>
-            <?php for($j=0; $j<count($plats); $j++){ ?>
+        </div> <!-- ./col-md-10 -->
 
-                <h3><?= $plats[$i][$j]['plat_name'] ?></h3>
-
-            <?php } ?>
-        </div>
-
-        <div class='desserts'>
-            <h2>Désserts</h2>
-            <?php for($j=0; $j<count($desserts); $j++){ ?>
-
-                <h3><?= $desserts[$i][$j]['plat_name'] ?></h3>
-
-            <?php } ?>
-        </div>
-    
-    </div>
-
-    <?php } ?>
-    
+    </div> <!-- ./row -->
     </div> <!-- ./container -->
         
     <!-- Footer -->
@@ -64,11 +74,3 @@
     
 </body>    
 </html>
-
-<style>
-.menu_frame{
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
-}
-</style>
