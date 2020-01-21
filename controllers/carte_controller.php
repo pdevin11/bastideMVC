@@ -1,6 +1,6 @@
 <?php
 
-include_once '_classes/Menus.php';
+/* Menus */
 
 $allMenus = Menus::getAllMenus();
 
@@ -15,12 +15,10 @@ for($i=0; $i<count($allMenus); $i++){
     array_push($desserts, $allDesserts);
 }
 
+/* A la carte */
 
-
-
-
-
-
-
-
-
+$carteEntrees = Carte::getCarteEntrees();
+$carteSalades = Carte::getCarteSalades();
+$cartePlats = Carte::getCartePlats();
+$carteFromages = Carte::getCarteFromages();
+$carteDesserts = Carte::getCarteDesserts();
