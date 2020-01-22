@@ -8,7 +8,6 @@
                             <ul>
                                 <li><a href="index.php?page=home"><?= $lang->footer->accueil ?></a></li>
                                 <li><a href="index.php?page=carte"><?= $lang->footer->carte ?></a></li>
-                                <li><a href="index.php?page=actualite"><?= $lang->footer->actu ?></a></li>
                                 <li><a href="index.php?page=photos"><?= $lang->footer->photos ?></a></li>
                             </ul>
                         </div>
@@ -19,7 +18,7 @@
                             <ul>
                                 <li><a href="index.php?page=reservation"><?= $lang->footer->reservation ?></a></li>
                                 <li><a href="index.php?page=contact"><?= $lang->footer->contact ?></a></li>
-                                <li><a href="index.php?page=livre_d_or"><?= $lang->footer->livre_dOr ?></a></li>
+                                <li><a href="https://www.tripadvisor.fr/Restaurant_Review-g674129-d1894641-Reviews-Restaurant_La_Bastide-Monpazier_Dordogne_Nouvelle_Aquitaine.html#REVIEWS"><?= $lang->footer->livre_dOr ?></a></li>
                             </ul>
                         </div>
                     </div>
