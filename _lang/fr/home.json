@@ -1,5 +1,6 @@
 {
     "presentation": "Le restaurant <em>La Bastide</em> de Monpazier vous accueille dans un cadre typique du Perigord. De nombreux plats traditionnels perigourdins vous seront proposés ainsi que des classiques de la cuisine lyonnaise.",
+    "carte_resa": "Si vous le souhaitez, vous pouvez consulter <a href='index.php?page=carte'>notre carte</a> ou bien <a href='index.php?page=reservation'>réserver</a> directement en ligne.",
     "horaires": "Horaires",
     "horairesDetails": "Le restaurant vous accueille tous les jours pendant la saison midi et soir.<br /> Fermetures le lundi soir ainsi que le dimanche soir.",
     "paiement": "Moyens de paiement acceptés",
