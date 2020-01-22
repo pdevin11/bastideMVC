@@ -1,5 +1,6 @@
 {
     "presentation": "The restaurant <em>La Bastide</em> of Monpazier welcomes you in a typical Perigord setting. Many traditional perigord dishes are offered as well as classics of lyonnaise's dishes.",
+    "carte_resa": "If you wish, you can consult <a href='index.php?page=carte'>our menu</a> or <a href='index.php?page=reservation'>book</a> directly online.",
     "horaires": "Timetable",
     "horairesDetails": "The restaurant is open every day for lunch and diner during season.<br /> Closed on Monday and Sunday evenings.",
     "paiement": "Payment accepted",
