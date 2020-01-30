@@ -1,0 +1,244 @@
+/* GENERAL */
+
+body
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #fff !important;
+}
+.container
+{
+    text-align: center;
+    color: #626e82;
+    margin-bottom: 50px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.container h1
+{
+    margin-bottom: 40px !important;
+    color: #315ba0;
+    text-align: center;
+}
+.error
+{
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    color: #a8513f;
+    font-size: 20px;
+    background-color: #dee2e8;
+    border: 2px solid #626e82;
+}
+
+/* ADMIN CONNEXION */
+
+.connexion_frame
+{
+    text-align: center;
+    color: #315ba0;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: #dee2e8;
+    border: 3px solid #626e82;
+    border-radius: 5px;
+}
+.connexion_frame > h1
+{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.input_elt
+{
+    margin: 20px;
+}
+
+/* MENU DE NAVIGATION PRINCIPALE */
+
+.navbar
+{
+    font-size: 25px;
+    letter-spacing: 4px; /* Espace entre les lettres */
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.navbar .navbar-nav
+{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+.navbar .navbar-collapse
+{
+    text-align: center;
+}
+
+
+/* ADMIN INDEX */
+
+#site_description
+{
+    font-size: 18px;
+}
+
+/* ADMIN LA CARTE */
+
+.divider
+{
+    width: 100px;
+    height: 2px;
+    background: #315ba0;
+    margin: 5px auto;
+}
+.menu_name
+{
+    font-size: 38px !important;
+    text-decoration: underline;
+    color: #626e82;
+    margin: 15px;
+    font-style: italic;
+    font-weight: bold;
+}
+.menu_price
+{
+    font-size: 28px !important;
+    color: #626e82;
+    font-style: italic;
+    font-weight: bold;
+}
+#ul-lateral > li{
+    width: 100%;
+    text-align: center;}
+/* faire l'encadré du menu latéral
+liste style type none
+...
+*/
+
+/* Gérer les menus 01/2020 */
+
+th{
+    text-align: center !important;
+}
+.btn-outline-success{
+	color: #28a745 !important;
+	border-color: #28a745  !important;
+
+}
+.btn-outline-success:hover {
+	color: #fff !important;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+.btn-outline-danger {
+	color: #dc3545;
+	border-color: #dc3545;
+}
+.btn-outline-danger:hover {
+	color: #fff !important;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+.btn-outline-warning {
+	color: #ffc107;
+	border-color: #ffc107;
+}
+.btn-outline-warning:hover {
+	color: #fff !important;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.commentError{
+    color: red;
+}
+
+/* ADMIN LIVRE D'OR */
+
+.view h1
+{
+    margin-bottom: 20px;
+}
+.view_frame
+{
+    min-height: 180px;
+    margin: 10px auto;
+    border: solid 1px #626e82;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.view_title
+{
+    font-family: 'lobster', 'cursive';
+    font-size: 30px;
+}
+.view_content
+{
+    margin: 10px;
+    font-size: 18px;
+}
+.view_details
+{
+    text-align: right;
+    font-size: 15px;
+}
+.view_date
+{
+    font-style: italic;
+}
+.view_author
+{
+    font-weight: bold;
+}
+
+/* ADMIN ACTUALITES */
+
+.billet_post
+{
+    text-align: left !important;
+    font-size: 18px;
+}
+
+.wysibb-body
+{
+    font-size: 16px !important;
+}
+textarea
+{
+    font-size: 16px !important;
+}
+
+/* ADMIN PHOTOS */
+
+.photo_post
+{
+    text-align: left !important;
+}
+
+/* FOOTER */
+
+#footer .container
+{
+    margin-bottom: 0px;
+}
+#footer
+{
+    color: #f2efdc !important;
+    background-color: #626e82;
+    border-top: 5px solid #4d5666;
+    font-size: 20px;
+}
+#footer p, #footer h3
+{
+    color: #f2efdc !important;
+}
+#footer a, #footer a:hover
+{
+    color: #f2efdc !important;
+
+}
+#copyright
+{
+    color: #f2efdc;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
