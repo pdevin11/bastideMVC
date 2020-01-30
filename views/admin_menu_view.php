@@ -69,6 +69,7 @@
                             <th scope="col">Nom</th>
                             <th scope="col">Type</th>
                             <th scope="col">Prix</th>
+                            <th scope="col">Prix XL</th>
                             <th scope="col">Modifier</th>
                             <th scope="col">Supprimer</th>
                             </tr>
@@ -82,6 +83,7 @@
                                 <td><?=$cartePlat['plat_name']?></td>
                                 <td><?=$cartePlat['plat_type']?></td>
                                 <td><?=$cartePlat['price']?> €</td>
+                                <td><?php if(isset($cartePlat['bigSize_price'])){echo $cartePlat['bigSize_price'].'€';}?></td>
                                 <td><a href="index.php?page=admin_plat_update&id=<?=$cartePlat['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
                                 <td><a href="index.php?page=admin_plat_delete&id=<?=$cartePlat['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
                             </tr>
