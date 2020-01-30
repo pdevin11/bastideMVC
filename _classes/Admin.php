@@ -12,12 +12,11 @@ class Admin{
 
         $addMenu = $db->prepare('INSERT INTO menus (menu_name, menu_price) VALUES (?, ?)');
         return $addMenu->execute(array($name, $price));
-
     }
 
     /**
-     * Modifie un menu
-     * @param $name, $price
+     * Modifie un menu en fonction de son id
+     * @param $name, $price, $id
      * @return $updateMenu
      */
     static function updateMenu($name, $price, $id){
@@ -49,13 +48,13 @@ class Admin{
     static function addPlat($name, $translation, $type, $price, $bigSize){
         global $db;
 
-        $addPlat = $db->prepare('INSERT INTO menu_of_dishes(plat_name, translation, plat_type, price, bigSize_price VALUE (?, ?, ?, ?, ?)');
+        $addPlat = $db->prepare('INSERT INTO menu_of_dishes(plat_name, translation, plat_type, price, bigSize_price) VALUE (?, ?, ?, ?, ?)');
         return $addPlat->execute(array($name, $translation, $type, $price, $bigSize));
     }
 
     /**
-     * Modifie un plat
-     * @param $name, $translation, $type, $price, $bigSize
+     * Modifie un plat en fonction de son id
+     * @param $name, $translation, $type, $price, $bigSize, $id
      * @return $updatePlat
      */
     static function updatePlat($name, $translation, $type, $price, $bigSize, $id){

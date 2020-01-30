@@ -2,11 +2,28 @@
 
 class Carte{
 
+    /**
+     * Recupère tous les plats disponnibles à la carte
+     * @return array
+     */
     static function getAllCartePlats(){
         global $db;
 
         $reqAllDishes = $db->query('SELECT * FROM menu_of_dishes');
         return $reqAllDishes->fetchAll();
+    }
+
+    /**
+     * Recupère un plat à la carte en fonction de son id
+     * @param $id
+     * @return array
+     */
+    static function getOnePlat($id){
+        global $db;
+
+        $reqOnePlat = $db->prepare('SELECT * FROM menu_of_dishes WHERE id = ?');
+        $reqOnePlat->execute(array($id));
+        return $reqOnePlat->fetch();
     }
 
     /**
