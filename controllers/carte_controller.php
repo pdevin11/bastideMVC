@@ -1,5 +1,8 @@
 <?php
 
+include_once '_classes/Menus.php';
+include_once '_classes/Carte.php';
+
 /* Menus */
 
 $allMenus = Menus::getAllMenus();
