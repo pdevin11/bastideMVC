@@ -35,7 +35,7 @@
                     
                 </div>
             </div>
-            <p id="copyright">© <a href="http://www.pdevin.fr/">Pierre Devin</a>, 2020 - <?= $lang->footer->rights ?></p>
+            <p id="copyright">© <a href="http://www.pdevin.fr/">Pierre Devin</a>, <?= date('Y') ?> - <?= $lang->footer->rights ?></p>
         </div>
     </section>
 </footer>
