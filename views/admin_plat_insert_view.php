@@ -30,40 +30,39 @@
 
                 <div class="form-group">
                     <label for="plat_name" class="label_title">Nom du plat :</label>
-                    <input type="text" class="form-control" id="plat_name" name="plat_name">
-                    <p class="commentError"><?php echo $menu_nameError; ?></p>
+                    <input type="text" class="form-control" id="plat_name" name="plat_name" value="<?=$name?>">
+                    <p class="commentError"><?php echo $plat_nameError; ?></p>
                 </div>
                 
                 <div class="form-group">
                     <label for="translation" class="label_title">Traduction du nom :</label>
-                    <input type="text" class="form-control" id="translation" name="translation">
-                    <p class="commentError"><?php echo $menu_nameError; ?></p>
+                    <input type="text" class="form-control" id="translation" name="translation" value="<?=$translation?>">
+                    <p class="commentError"><?php echo $translationError; ?></p>
                 </div>
                 
                 <div class="form-group">
                     <p>Quel est le type du plat ?</p>
-                        <input type="radio" name="plat_type" value="Entrée" name="entree"> <label for="entree">Entrée</label>
-                        <input type="radio" name="plat_type" value="Salade" name="salade"> <label for="salade">Salade</label>
-                        <input type="radio" name="plat_type" value="Plat" name="plat"> <label for="plat">Plat</label>
-                        <input type="radio" name="plat_type" value="Fromage" name="fromage"> <label for="fromage">Fromage</label>
-                        <input type="radio" name="plat_type" value="Dessert" name="dessert"> <label for="dessert">Dessert</label>
+                        <input type="radio" name="plat_type" value="Entrée" id='entree'   <?php if($_POST['plat_type']=='Entrée'){echo 'checked';}?>> <label for="entree">Entrée</label>
+                        <input type="radio" name="plat_type" value="Salade" id='salade'  <?php if($_POST['plat_type']=='Salade'){echo 'checked';}?>> <label for="salade">Salade</label>
+                        <input type="radio" name="plat_type" value="Plat" id='plat'    <?php if($_POST['plat_type']=='Plat'){echo 'checked';}?>> <label for="plat">Plat</label>
+                        <input type="radio" name="plat_type" value="Fromage" id='fromage' <?php if($_POST['plat_type']=='Fromage'){echo 'checked';}?>> <label for="fromage">Fromage</label>
+                        <input type="radio" name="plat_type" value="Dessert" id='dessert' <?php if($_POST['plat_type']=='Dessert'){echo 'checked';}?>> <label for="dessert">Dessert</label>
                     <p class="commentError"><?php echo $plat_typeError; ?></p>
                 </div>
 
                 <div class="form-group">
                     <label for="plat_price" class="label_title">Prix du plat :</label>
-                    <input type="number" class="form-control" step="0.1" id="plat_price" name="plat_price">
-                    <p class="commentError"><?php echo $menu_priceError; ?></p>
+                    <input type="number" class="form-control" step="0.1" id="plat_price" name="plat_price" value="<?=$price?>">
+                    <p class="commentError"><?php echo $plat_priceError; ?></p>
                 </div>
 
                 <div class="form-group">
                     <label for="bigSize_price" class="label_title">Prix du plat en grande taille :</label> (A ne compléter que s'il existe deux tailles pour le plat)
-                    <input type="number" class="form-control" step="0.1" id="bigSize_price" name="bigSize_price">
-                    <p class="commentError"><?php echo $menu_priceError; ?></p>
+                    <input type="number" class="form-control" step="0.1" id="bigSize_price" name="bigSize_price" value="<?=$bigSize?>">
                 </div>
 
                 <div class="form-group">
-                    <input class="btn btn-success" type="button" value="Ajouter le plat">
+                    <input class="btn btn-success" type="submit" name="ajouter" value="Ajouter le plat">
                     <a href="index.php?page=admin_menu"><button type="button" class="btn btn-danger">Annuler</button></a>
 
                 </div>
