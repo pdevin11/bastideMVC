@@ -2,9 +2,12 @@
 
 include_once '_classes/Menus.php';
 include_once '_classes/Carte.php';
-include_once '_classes/Admin.php';
 
-/* Menus */
+/* Affichage des Menus */
 
-$allMenus = Menus::getAllMenus();
+$menusOnline = Menus::getMenusOnline();
+$menusPending = Menus::getAllMenus();
+
+/* Affichage des plats à la carte */
+
 $allCartePlats = Carte::getAllCartePlats();
