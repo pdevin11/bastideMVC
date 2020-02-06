@@ -1,6 +1,5 @@
 <?php
 
-include_once '_classes/Menus.php';
 include_once '_classes/Admin.php';
 
 /* Ajout d'un menu */
@@ -18,10 +17,9 @@ if(isset($_POST['ajouter'])){
         $price = str_secur($_POST['menu_price']);
     }
 
-    if(isset($name) && isset($price)){
+    if(isset($name, $price)){
         Admin::addMenu($name, $price);
         header('location:index.php?page=admin_menu');
-        // /* Faire une redirection sur la page d'edition du menu pour ajouter les plats */
     }
 }
 
