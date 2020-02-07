@@ -54,7 +54,12 @@
                             <td scope="row"><?=$menu['menu_name']?></td>
                             <td><?=$menu['menu_price']?></td>
                             <td><a href="index.php?page=admin_menu_update&id=<?=$menu['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
-                            <td><a href="index.php?page=admin_menu_delete&id=<?=$menu['id']?>"><button type="button" class="btn btn-outline-danger">Passer Hors ligne</button></a></td>
+                            <td>
+                                <form action="" method='post'>
+                                    <input type="hidden" name="idMenu" value='<?=$menu['id']?>'>
+                                    <input type="submit" name="offline" class='btn btn-outline-danger' value='Passer hors ligne'>
+                                </form>                  
+                            </td>
                         </tr>
                         
                         <?php } ?>
