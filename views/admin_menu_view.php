@@ -42,8 +42,7 @@
                         <tr>
                             <th scope="col">Nom</th>
                             <th scope="col">Prix</th>
-                            <th scope="col">Modifier</th>
-                            <th scope="col">Passer Hors ligne</th>
+                            <th scope="col">Modifier / Passer hors ligne</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,13 +52,7 @@
                         <tr>
                             <td scope="row"><?=$menu['menu_name']?></td>
                             <td><?=$menu['menu_price']?></td>
-                            <td><a href="index.php?page=admin_menu_update&id=<?=$menu['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
-                            <td>
-                                <form action="" method='post'>
-                                    <input type="hidden" name="idMenu" value='<?=$menu['id']?>'>
-                                    <input type="submit" name="offline" class='btn btn-outline-danger' value='Passer hors ligne'>
-                                </form>                  
-                            </td>
+                            <td><a href="index.php?page=admin_menu_update&id=<?=$menu['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier / Passer hors ligne</button></a></td>
                         </tr>
                         
                         <?php } ?>

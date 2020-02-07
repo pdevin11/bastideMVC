@@ -29,10 +29,16 @@
         <?php
         if($menu['isOnline'] == 'false'){ ?>
             <form action="" method='post'>
-                <label for="online">Ce menu est hors ligne. Souhaite-vous le mettre en ligne?</label>
+                <label for="online">Ce menu est hors ligne. Souhaitez-vous le mettre en ligne?</label>
                 <input type="submit" name='online' class='btn btn-success' value='Oui'>
             </form>
         <?php    
+        }else if($menu['isOnline'] == 'true'){?>
+            <form action="" method='post'>
+                <label for="offline">Ce menu est en ligne. Souhaitez-vous le mettre hors ligne?</label>
+                <input type="submit" name='offline' class='btn btn-success' value='Oui'>
+            </form>       
+        <?php
         }
         ?>
 
