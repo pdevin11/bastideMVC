@@ -24,6 +24,18 @@
 
         <h3>Editer le " <?=$menu['menu_name']?>"</h3>
 
+        <br>
+        
+        <?php
+        if($menu['isOnline'] == 'false'){ ?>
+            <form action="" method='post'>
+                <label for="online">Ce menu est hors ligne. Souhaite-vous le mettre en ligne?</label>
+                <input type="submit" name='online' class='btn btn-success' value='Oui'>
+            </form>
+        <?php    
+        }
+        ?>
+
         <br><br> <!-- ajouter du margin pour virer les br moches -->
 
             <form action="" method="post">
@@ -45,9 +57,93 @@
                     <a href="index.php?page=admin_menu"><button type="button" class="btn btn-danger">Annuler</button></a>
                 </div>
 
-                
-
             </form>
+
+            <br>
+            <br>
+
+            <h2>Détail du menu " <?=$menu['menu_name'] ?> " <a href="index.php?page=admin_menu_insert_plat&id_menu=<?=$menu['id']?>"><button type="button" class="btn btn-outline-success">Ajouter</button></a></h2>
+
+            <h3>Entrées</h3>
+
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Traduction</th>
+                        <th scope="col">Modifier</th>
+                        <th scope="col">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <?php foreach($entrees as $entree){ ?>
+
+                        <tr>
+                            <td scope="row"><?= $entree['plat_name'] ?></td>
+                            <td><?= $entree['translation'] ?></td>
+                            <td><a href="index.php?page=admin_menu_update_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$entree['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
+                            <td><a href="index.php?page=admin_menu_delete_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$entree['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                        </tr>
+                        
+                        <?php } ?>
+
+                    </tbody>
+                </table>
+
+            <h3>Plat</h3>
+
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Traduction</th>
+                        <th scope="col">Modifier</th>
+                        <th scope="col">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <?php foreach($plats as $plat){ ?>
+
+                        <tr>
+                            <td scope="row"><?= $plat['plat_name'] ?></td>
+                            <td><?= $plat['translation'] ?></td>
+                            <td><a href="index.php?page=admin_menu_update_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$plat['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
+                            <td><a href="index.php?page=admin_menu_delete_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$plat['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                        </tr>
+
+                        <?php } ?>
+
+                    </tbody>
+                </table>      
+
+            <h3>Desserts</h3>
+
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Traduction</th>
+                        <th scope="col">Modifier</th>
+                        <th scope="col">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <?php foreach($desserts as $dessert){ ?>
+
+                        <tr>
+                            <td scope="row"><?=$dessert['plat_name']?></td>
+                            <td><?=$dessert['translation']?></td>
+                            <td><a href="index.php?page=admin_menu_update_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$dessert['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
+                            <td><a href="index.php?page=admin_menu_delete_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$dessert['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                        </tr>
+                        
+                        <?php } ?>
+
+                    </tbody>
+                </table>
 
         </div> <!-- /.col-md-9 -->
 
