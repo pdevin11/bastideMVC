@@ -3,7 +3,7 @@
 class Menus {
 
     /**
-     * Récupère tous les menus pour le menu de navigation
+     * Récupère tous les menus actuellement en ligne
      * @return array
      */
     static function getAllMenus(){
@@ -11,6 +11,17 @@ class Menus {
 
         $reqMenus = $db->query('SELECT * FROM menus');
         return $reqMenus->fetchAll();
+    }
+
+    /**
+     * Récupère tous les menus disponibles en DB en ligne ou non
+     * @return array
+     */
+    static function getMenusOnline(){
+        global $db;
+
+        $reqMenusOnline = $db->query('SELECT * FROM menus WHERE isOnline = "true"');
+        return $reqMenusOnline->fetchAll();
     }
 
     /**
@@ -25,6 +36,19 @@ class Menus {
         $reqMenu->execute(array($id));
         return $reqMenu->fetch();
     }
+
+    /**
+     * Recupère un plat d'un menu en fonction de l'id du plat
+     * @param $id
+     * @return array
+     */
+    static function getDish($id){
+        global $db;
+
+        $reqDish = $db->prepare('SELECT * FROM plats_names WHERE id = ?');
+        $reqDish->execute(array($id));
+        return $reqDish->fetch();
+    }
     
     /**
      * Récupère les entrées en fonction de l'id du menu
@@ -35,7 +59,7 @@ class Menus {
         global $db;
 
         $reqEntrees = $db->query("
-            SELECT plat_name, translation, id_menu FROM plats_names 
+            SELECT * FROM plats_names 
             WHERE id_menu = '.$id.'
             AND plat_type = 'Entrée'
             ");
@@ -51,7 +75,7 @@ class Menus {
         global $db;
 
         $reqPlats = $db->query("
-            SELECT plat_name, translation, id_menu FROM plats_names 
+            SELECT * FROM plats_names 
             WHERE id_menu = '.$id.' 
             AND plat_type = 'Plat'
             ");
@@ -67,7 +91,7 @@ class Menus {
         global $db;
 
         $reqDesserts = $db->query("
-            SELECT plat_name, translation FROM plats_names 
+            SELECT * FROM plats_names 
             WHERE id_menu = '.$id.' 
             AND plat_type = 'Dessert'
             ");
