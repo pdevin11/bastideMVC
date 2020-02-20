@@ -16,6 +16,11 @@ class Admin{
         return $addMenu->execute(array($name, $price));
     }
 
+    /**
+     * Modifie un menu en Base de donnée pour le passer en ligne
+     * @param $id
+     * @return array
+     */
     static function setMenuOnline($id){
         global $db;
 
@@ -23,6 +28,11 @@ class Admin{
         return $setOnline->execute(array($id));
     }
 
+    /**
+     * Modifie un menu en base de donnée pour le passer hors ligne
+     * @param $id
+     * @return array
+     */
     static function setMenuOffline($id){
         global $db;
 
