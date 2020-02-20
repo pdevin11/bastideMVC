@@ -1,4 +1,8 @@
-<?php
+<?php session_start(); 
+
+if(!isset($_SESSION['identifiant'])){
+    header('location:index.php?page=admin_connexion');
+}
 
 include_once '_classes/Carte.php';
 include_once '_classes/Admin.php';

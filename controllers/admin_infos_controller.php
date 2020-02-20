@@ -1,14 +1,8 @@
-<?php
+<?php session_start(); 
 
-/* 
-
-- le model de admin_infos#table ne sert qu'à modifier les entrées, celui du home ne sert qu'à les afficher, donc classe inutile, juste une fonction dans chaque model
-- Une méthode unique normalement uniquement pour modifier donc un update
-- Ajouter les values checked dans les input radio du formulaire
-- Essayer de compacter les <tr>
-- Créer le json pour gérer les jours et les 'open' et 'closed'
-
-*/
+if(!isset($_SESSION['identifiant'])){
+    header('location:index.php?page=admin_connexion');
+}
 
 include_once '_classes/Timetable.php';
 
