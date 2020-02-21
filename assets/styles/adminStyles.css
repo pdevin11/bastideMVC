@@ -151,6 +151,13 @@ th{
     color: red;
 }
 
+.glyphicon-ok-sign{
+    color: green;
+}
+.glyphicon-remove-sign{
+    color: red;
+}
+
 /* ADMIN LIVRE D'OR */
 
 .view h1
