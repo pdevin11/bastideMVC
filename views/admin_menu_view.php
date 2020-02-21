@@ -97,12 +97,13 @@
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
-                        <th scope="col">Nom (Traduction)</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Prix</th>
-                        <th scope="col">Prix XL</th>
-                        <th scope="col">Modifier</th>
-                        <th scope="col">Supprimer</th>
+                            <th scope="col">Nom (Traduction)</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Prix XL</th>
+                            <th scope="col">Modifier</th>
+                            <th scope="col">Supprimer</th>
+                            <th scope="col">Statut</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -116,6 +117,13 @@
                             <td><?php if(isset($cartePlat['bigSize_price'])){echo $cartePlat['bigSize_price'].'€';}?></td>
                             <td><a href="index.php?page=admin_plat_update&id=<?=$cartePlat['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
                             <td><a href="index.php?page=admin_plat_delete&id=<?=$cartePlat['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                            <td>
+                                <?php if($cartePlat['isOnline'] == "true"){ ?>
+                                    <span class="glyphicon glyphicon-ok-sign"></span>
+                                <?php } else if($cartePlat['isOnline'] == "false") { ?>
+                                    <span class="glyphicon glyphicon-remove-sign"></span>
+                                <?php } ?>
+                            </td>
                         </tr>
                         
                         <?php } ?>
