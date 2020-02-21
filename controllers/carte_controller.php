@@ -5,7 +5,7 @@ include_once '_classes/Carte.php';
 
 /* Menus */
 
-$allMenus = Menus::getAllMenus();
+$allMenus = Menus::getMenusOnline();
 
 $entrees = $plats = $desserts = [];
 
@@ -20,8 +20,9 @@ for($i=0; $i<count($allMenus); $i++){
 
 /* A la carte */
 
-$carteEntrees = Carte::getCarteEntrees();
-$carteSalades = Carte::getCarteSalades();
-$cartePlats = Carte::getCartePlats();
-$carteFromages = Carte::getCarteFromages();
-$carteDesserts = Carte::getCarteDesserts();
+$carteEntrees = Carte::getCarteDish('Entrée');
+$carteSalades = Carte::getCarteDish('Salade');
+$cartePlats = Carte::getCarteDish('Plat');
+$carteFromages = Carte::getCarteDish('Fromage');
+$carteDesserts = Carte::getCarteDish('Dessert');
+
