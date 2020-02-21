@@ -58,6 +58,10 @@ body
 
 /* Gérer les menus  */
 
+#ul-lateral > li{
+    width: 100%;
+    text-align: center;}
+
 th{
     text-align: center !important;
 }
