@@ -52,64 +52,6 @@ body
     opacity: 0.85;
 }
 
-/* MENU IMAGES ACCUEIL */
-
-.menu_frame
-{
-    display: flex;
-    justify-content: space-around;
-}
-#actu
-{
-    background-image: url("../images/image_actu_accueil.jpg");
-    border: 1px solid #000;
-}
-#carte
-{
-    background-image: url("../images/image_carte_accueil.png");
-    border: 1px solid #000;
-}
-#contact
-{
-    background-image: url("../images/image_contact_accueil.jpg");
-    border: 1px solid #000;
-}
-.div_fade /* #actu #carte #contact */
-{
-    height: 300px;
-    width: 200px;
-    opacity: 0.7;
-    transition: opacity 500ms;
-}
-#actu:hover, #carte:hover, #contact:hover /* .div_fade */
-{
-    opacity: 1;
-}
-#actu_link, #carte_link, #contact_link
-{
-    opacity: 0;
-    transition: opacity 500ms;
-    height: 100%;
-}
-.links
-{
-    color: #2d323a !important;
-    font-size: 45px;
-    text-align: center;
-    line-height: 200px;
-    font-family: 'lobster', 'cursive';
-    text-shadow: 1px 1px #e6af4b;
-    height: 300px;
-}
-.links:hover
-{
-    text-decoration: none;
-}
-#actu_link:hover, #carte_link:hover, #contact_link:hover
-{
-    opacity: 1;
-}
-
 /* DESCRIPTION DU RESTAURANT */
 
 #restaurant_description
@@ -121,7 +63,6 @@ body
     font-size: 60px;
     color: #626e82;
     margin: 30px;
-    /* font-style: italic; */
 }
 #restaurant_description h4
 {
@@ -138,47 +79,6 @@ body
 {
     font-size: 20px;
     color: #626e82;
-}
-
-/* CAROUSSEL DES TROIS DERNIERS AVIS */
-
-.carousel-inner
-{
-    height: 250px;
-    margin-top: 50px;
-}
-.view_frame_carousel
-{
-    height: 250px;
-    margin: auto;
-    padding-top: 90px;
-}
-.view_title_carousel
-{
-    font-family: 'lobster', 'cursive';
-    font-size: 30px;
-}
-.view_content_carousel
-{
-    margin: 10px;
-    font-size: 15px;
-}
-.view_details_carousel
-{
-    font-size: 15px;
-}
-.view_date_carousel
-{
-    font-style: italic;
-}
-.view_author_carousel
-{
-    font-weight: bold;
-}
-.carousel-control.left, .carousel-control.right
-{
-    background-image: none;
-    color: #e6af4b;
 }
 
 /* FOOTER */
@@ -219,7 +119,6 @@ body
 {
     color: #efebd2;
 }
-
 #copyright
 {
     color: #f2efdc;
@@ -274,7 +173,6 @@ body
     display: flex;
     flex-direction: column;
 }
-
 .nav_carte
 {
     margin-top: 100px;
@@ -345,97 +243,6 @@ h3
 {
     font-style: italic;
     font-size: 20px;
-}
-.wines_list
-{
-    display: flex;
-    justify-content: space-around;
-}
-.wines_names
-{
-    text-align: left;
-}
-.wines_infos
-{
-    display: flex;
-    justify-content: space-around;
-}
-.carafe_price
-{
-    margin: auto 20px auto 20px;
-}
-.caption
-{
-    font-weight: bold;
-    font-size: 20px;
-}
-.wine_name
-{
-    font-size: 20px;
-}
-
-/* ------------------------------------------------------------ */ 
- 
-/* PAGE ACTUALITES */ 
-
-.post
-{   
-    border: 1px solid #8894a8;
-    border-radius: 10px;
-    padding: 10px;
-    color: #626e82;
-    margin: 20px;
-    background-color: #dee2e8;
-    margin-bottom: 50px;
-}
-.post_title
-{
-    margin: 20px;
-    font-size: 30px;
-}
-.post_content
-{
-    margin: 10px;
-    font-size: 20px;
-}
-.post_info
-{
-    text-align: right;
-    margin: 10px;
-    font-size: 20px;
-}
-.post_date
-{
-    font-weight: bold;
-    font-size: 20px;
-}
-
-/* ------------------------------------------------------------ */ 
- 
-/* PAGE PHOTOS */ 
-
-#galery_frame /* cadre contenant la galerie */
-{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 60px auto;
-}
-.photo_frame /* cadre contenant les photos */
-{
-    border: 2px solid #8894a8;
-    display: flex;
-    margin: 5px;
-    padding: 5px;
-}
-.photo_frame > a
-{
-    margin: auto 0px; /* permet de centrer l'image dans le cadre */
-}
-.photo_content
-{
-    width: 250px;
-    height: auto;
 }
 
 /* ------------------------------------------------------------ */ 
@@ -544,44 +351,6 @@ textarea.form-control
     width: 50px;
     height: auto;
     margin: 10px;
-}
-
-/* PAGE LIVRE D'OR */
-
-.view h1
-{
-    margin-bottom: 20px;
-}
-.view_frame
-{
-    min-height: 180px;
-    margin: 10px auto;
-    border: solid 1px #626e82;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-.view_title
-{
-    font-family: 'lobster', 'cursive';
-    font-size: 30px;
-}
-.view_content
-{
-    margin: 10px;
-    font-size: 18px;
-}
-.view_details
-{
-    text-align: right;
-    font-size: 15px;
-}
-.view_date
-{
-    font-style: italic;
-}
-.view_author
-{
-    font-weight: bold;
 }
 
 /* LANG-ICONS */
