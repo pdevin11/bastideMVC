@@ -18,66 +18,24 @@ class Carte{
      * @param $id
      * @return array
      */
-    static function getOnePlat($id){
+    static function getDish($id){
         global $db;
 
-        $reqOnePlat = $db->prepare('SELECT * FROM menu_of_dishes WHERE id = ?');
-        $reqOnePlat->execute(array($id));
-        return $reqOnePlat->fetch();
+        $reqDish = $db->prepare('SELECT * FROM menu_of_dishes WHERE id = ?');
+        $reqDish->execute(array($id));
+        return $reqDish->fetch();
     }
 
     /**
-     * Récupère toutes les entrées disponnibles à la carte
+     * Recupère les plats à la carte en fonction du type de plat
+     * @param $type
      * @return array
      */
-    static function getCarteEntrees(){
+    static function getCarteDish(string $type){
         global $db;
 
-        $reqCarteEntrees = $db->query('SELECT * FROM menu_of_dishes WHERE plat_type = "Entrée"');
-        return $reqCarteEntrees->fetchAll();
-    }
-
-    /**
-     * Récupère toutes les salades disponnibles à la carte 
-     * @return array
-     */
-    static function getCarteSalades(){
-        global $db;
-
-        $reqCarteSalades = $db->query('SELECT * FROM menu_of_dishes WHERE plat_type = "Salade"');
-        return $reqCarteSalades->fetchAll();
-    }
-
-    /**
-     * Récupère toutes les plats disponnibles à la carte 
-     * @return array
-     */
-    static function getCartePlats(){
-        global $db;
-
-        $reqCartePlats = $db->query('SELECT * FROM menu_of_dishes WHERE plat_type = "Plat"');
-        return $reqCartePlats->fetchAll();
-    }
-
-    /**
-     * Récupère toutes les fromages disponnibles à la carte 
-     * @return array
-     */
-    static function getCarteFromages(){
-        global $db;
-
-        $reqCarteFromages = $db->query('SELECT * FROM menu_of_dishes WHERE plat_type = "Fromage"');
-        return $reqCarteFromages->fetchAll();
-    }
-
-    /**
-     * Récupère toutes les desserts disponnibles à la carte 
-     * @return array
-     */
-    static function getCarteDesserts(){
-        global $db;
-
-        $reqCarteDesserts = $db->query('SELECT * FROM menu_of_dishes WHERE plat_type = "Dessert"');
-        return $reqCarteDesserts->fetchAll();
+        $reqCD = $db->prepare('SELECT * FROM menu_of_dishes WHERE isOnline = "true" AND plat_type = ?');
+        $reqCD->execute(array($type));
+        return $reqCD->fetchAll();
     }
 }
