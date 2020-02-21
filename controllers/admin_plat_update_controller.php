@@ -50,3 +50,17 @@ if(isset($_POST['modifier'])){
         header('location:index.php?page=admin_menu');
     }
 }
+
+/* Mise en ligne d'un plat */
+
+if(isset($_POST['setOnline'])){
+    Admin::setPlatOnline($id);
+    header('location:index.php?page=admin_plat_update&id='.$id);
+}
+
+/* Mise hors ligne d'un plat */
+
+if(isset($_POST['setOffline'])){
+    Admin::setPlatOffline($id);
+    header('location:index.php?page=admin_plat_update&id='.$id);
+}
