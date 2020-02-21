@@ -74,7 +74,7 @@ class Admin{
     static function addPlatToMenu($name, $translation, $type, $menuName, $idMenu){
         global $db;
 
-        $addPTM = $db->prepare('INSERT INTO plats_names(plat_name, translation, plat_type, menu_name, id_menu) VALUES (?, ?, ?, ?, ?)');
+        $addPTM = $db->prepare('INSERT INTO plats_names(plat_name, translation, plat_type, menu_name, id_menu, isOnline) VALUES (?, ?, ?, ?, ?, "false")');
         return $addPTM->execute(array($name, $translation, $type, $menuName, $idMenu));
     }
 
@@ -114,6 +114,30 @@ class Admin{
 
         $addPlat = $db->prepare('INSERT INTO menu_of_dishes(plat_name, translation, plat_type, price, bigSize_price) VALUE (?, ?, ?, ?, ?)');
         return $addPlat->execute(array($name, $translation, $type, $price, $bigSize));
+    }
+
+    /**
+     * Modifie la valeur de isOnline à 'true' pour passer le plat en ligne
+     * @param $id
+     * @return array
+     */
+    static function setPlatOnline($id){
+        global $db;
+
+        $reqSetOnline = $db->prepare('UPDATE menu_of_dishes SET isOnline = "true" WHERE id = ?');
+        return $reqSetOnline->execute(array($id));
+    }
+
+    /**
+     * Modifie la valeur de isOnline à 'false' pour passer le plat hors ligne
+     * @param $id
+     * @return array
+     */
+    static function setPlatOffline($id){
+        global $db;
+
+        $reqSetOffline = $db->prepare('UPDATE menu_of_dishes SET isOnline = "false" WHERE id = ?');
+        return $reqSetOffline->execute(array($id));
     }
 
     /**
