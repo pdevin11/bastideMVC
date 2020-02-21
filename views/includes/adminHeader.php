@@ -11,7 +11,6 @@
             <li><a href="index.php?page=admin_home">Accueil</a></li>
             <li><a href="index.php?page=admin_menu">La carte</a></li>
             <li><a href="index.php?page=admin_infos">Gestion des horaires</a></li>
-            <li><a href="index.php?page=admin_help">Aide</a></li>
         </ul>
     </div>
 </nav>
