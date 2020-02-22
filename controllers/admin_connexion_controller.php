@@ -1,9 +1,5 @@
 <?php session_start(); 
 
-if(!isset($_SESSION['identifiant'])){
-    header('location:index.php?page=admin_connexion');
-}
-
 if(isset($_POST['connexion'])){
 
     if(isset($_POST['identifiant'])){
