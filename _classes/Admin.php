@@ -105,7 +105,7 @@ class Admin{
     /* Gestion de la carte des plats */
 
     /**
-     * Ajoute un nouveau plat
+     * Ajoute un nouveau plat avec 'isOnline' défini à false par défaut
      * @param $name, $translation, $type, $price, $bigSize
      * @return $addPlat
      */
