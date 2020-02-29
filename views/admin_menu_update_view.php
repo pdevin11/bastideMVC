@@ -79,6 +79,7 @@
                         <th scope="col">Traduction</th>
                         <th scope="col">Modifier</th>
                         <th scope="col">Supprimer</th>
+                        <th scope="col">Statut</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,6 +91,13 @@
                             <td><?= $entree['translation'] ?></td>
                             <td><a href="index.php?page=admin_menu_update_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$entree['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
                             <td><a href="index.php?page=admin_menu_delete_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$entree['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                            <td>
+                                <?php if($entree['isOnline'] == "true"){ ?>
+                                    <span class="glyphicon glyphicon-ok-sign"></span>
+                                <?php } else if($entree['isOnline'] == "false") { ?>
+                                    <span class="glyphicon glyphicon-remove-sign"></span>
+                                <?php } ?>
+                            </td>
                         </tr>
                         
                         <?php } ?>
@@ -117,6 +125,13 @@
                             <td><?= $plat['translation'] ?></td>
                             <td><a href="index.php?page=admin_menu_update_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$plat['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
                             <td><a href="index.php?page=admin_menu_delete_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$plat['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                            <td>
+                                <?php if($plat['isOnline'] == "true"){ ?>
+                                    <span class="glyphicon glyphicon-ok-sign"></span>
+                                <?php } else if($plat['isOnline'] == "false") { ?>
+                                    <span class="glyphicon glyphicon-remove-sign"></span>
+                                <?php } ?>
+                            </td>
                         </tr>
 
                         <?php } ?>
@@ -144,6 +159,13 @@
                             <td><?=$dessert['translation']?></td>
                             <td><a href="index.php?page=admin_menu_update_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$dessert['id']?>"><button type="button" class="btn btn-outline-warning">Mofidier</button></a></td>
                             <td><a href="index.php?page=admin_menu_delete_plat&id_menu=<?=$menu['id']?>&id_plat=<?=$dessert['id']?>"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                            <td>
+                                <?php if($dessert['isOnline'] == "true"){ ?>
+                                    <span class="glyphicon glyphicon-ok-sign"></span>
+                                <?php } else if($dessert['isOnline'] == "false") { ?>
+                                    <span class="glyphicon glyphicon-remove-sign"></span>
+                                <?php } ?>
+                            </td>
                         </tr>
                         
                         <?php } ?>

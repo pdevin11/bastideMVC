@@ -26,6 +26,20 @@
 
         <br><br> <!-- ajouter du margin pour virer les br moches -->
 
+            <?php if($dish['isOnline'] == "true"){ ?>
+                <form action="" method='post'>
+                    <p>Ce plat est en ligne, souhaitez-vous le retirer du menu ?
+                    <input type="submit" name='setOffline' value='Retirer de la carte' class='btn btn-danger'></p>
+                </form>
+            <?php } else { ?>
+                <form action="" method='post'>
+                    <p>Ce plat est hors ligne, souhaitez-vous l'ajouter au menu ?
+                    <input type="submit" name='setOnline' value='Ajouter à la carte' class='btn btn-success'></p>
+                </form>
+            <?php } ?>
+
+            <br><br>
+
             <form action="" method="post">
 
                 <div class="form-group">
