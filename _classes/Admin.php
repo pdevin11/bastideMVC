@@ -74,7 +74,7 @@ class Admin{
     static function addPlatToMenu($name, $translation, $type, $menuName, $idMenu){
         global $db;
 
-        $addPTM = $db->prepare('INSERT INTO plats_names(plat_name, translation, plat_type, menu_name, id_menu, isOnline) VALUES (?, ?, ?, ?, ?, "false")');
+        $addPTM = $db->prepare('INSERT INTO plats_names(plat_name, translation, plat_type, menu_name, id_menu) VALUES (?, ?, ?, ?, ?)');
         return $addPTM->execute(array($name, $translation, $type, $menuName, $idMenu));
     }
 
