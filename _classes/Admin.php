@@ -79,6 +79,30 @@ class Admin{
     }
 
     /**
+     * Passe un plat d'un menu en ligne
+     * @param $id
+     * return $reqPMOnline
+     */
+    static function setPMOnline($id){
+        global $db;
+
+        $reqPMOnline = $db->prepare('UPDATE plats_names SET isOnline = "true" WHERE id = ?');
+        return $reqPMOnline->execute(array($id));
+    }
+
+    /**
+     * Passe un plat d'un menu hors ligne
+     * @param $id
+     * return $reqPMOffline
+     */
+    static function setPMOffline($id){
+        global $db;
+
+        $reqPMOffline = $db->prepare('UPDATE plats_names SET isOnline = "false" WHERE id = ?');
+        return $reqPMOffline->execute(array($id));
+    }
+
+    /**
      * Modifie un plat d'un menu en fonction de l'id du plat
      * @param $name, $translation, $type, $id
      * @return array
