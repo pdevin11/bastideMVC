@@ -41,3 +41,17 @@ if(isset($_POST['modifier'])){
         echo 'Erreur';
     }
 }
+
+/* Mise en ligne d'un plat du menu */
+
+if(isset($_POST['setOnline'])){
+    Admin::setPMOnline($idPlat);
+    header('location:index.php?page=admin_menu_update_plat&id_menu='.$idMenu.'&id_plat='.$idPlat);
+}
+
+/* Mise hors ligne d'un plat du menu */
+
+if(isset($_POST['setOffline'])){
+    Admin::setPMOffline($idPlat);
+    header('location:index.php?page=admin_menu_update_plat&id_menu='.$idMenu.'&id_plat='.$idPlat);
+}
