@@ -58,11 +58,13 @@ class Menus {
     static function getEntrees($id){
         global $db;
 
-        $reqEntrees = $db->query("
+        $reqEntrees = $db->prepare("
             SELECT * FROM plats_names 
             WHERE id_menu = '.$id.'
             AND plat_type = 'Entrée'
+            AND isOnline = 'true'
             ");
+        $reqEntrees->execute(array($id));
         return $reqEntrees->fetchAll();
     }
     
@@ -74,11 +76,13 @@ class Menus {
     static function getPlats($id){
         global $db;
 
-        $reqPlats = $db->query("
+        $reqPlats = $db->prepare("
             SELECT * FROM plats_names 
-            WHERE id_menu = '.$id.' 
+            WHERE id_menu = '.$id.'
             AND plat_type = 'Plat'
+            AND isOnline = 'true'
             ");
+        $reqPlats->execute(array($id));
         return $reqPlats->fetchAll();
     }
 
@@ -90,11 +94,13 @@ class Menus {
     static function getDesserts($id){
         global $db;
 
-        $reqDesserts = $db->query("
+        $reqDesserts = $db->prepare("
             SELECT * FROM plats_names 
             WHERE id_menu = '.$id.' 
             AND plat_type = 'Dessert'
+            AND isOnline = 'true'
             ");
+        $reqDesserts->execute(array($id));
         return $reqDesserts->fetchAll();
     }
 }
