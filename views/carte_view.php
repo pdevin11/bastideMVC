@@ -16,13 +16,13 @@
         
     <nav>
         <ul class='nav nav-pills nav_carte'>
+            
+            <li role='presentation' class='active'><a href="#laCarte" data-toggle='tab'>À la carte</a></li>
+
 
             <?php foreach($allMenus as $menu){ ?>
                 <li role='presentation'><a href="#<?=$menu['id']?>" data-toggle='tab'><?=$menu['menu_name']?></a></li>
             <?php } /* end foreach */ ?> 
-            
-            <li role='presentation' class='active'><a href="#laCarte" data-toggle='tab'>À la carte</a></li>
-
         </ul>
     </nav>
         
